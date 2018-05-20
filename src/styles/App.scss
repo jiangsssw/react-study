@@ -33,6 +33,11 @@ html, body{
             padding: 40px;
             background-color: #fff;
             box-sizing: border-box;
+            transform-style: preserve-3d;
+            cursor: pointer;
+            &.is-inverse{
+                transform: translate(320px) rotateY(180deg);
+            }
         }
 
         figcaption{
@@ -43,6 +48,31 @@ html, body{
 
                 color: #a7a0a2;
                 font-size: 16px;
+            }
+            .img-back {
+                position: absolute;
+                left: 0;
+                top: 0;
+
+                width: 100%;
+                height: 100%;
+                padding: 50px 40px;
+                overflow: auto;
+
+                color: #a7a0a2;  //typography
+                font-size: 22px;
+                line-height: 1.25;
+                text-align: left;
+
+                background-color: #fff;
+
+                box-sizing: border-box;
+                backface-visibility: hidden;
+                transform: rotateY(180deg) translateZ(1px);
+
+                p{
+                    margin: 0;
+                }
             }
         }
     }
@@ -59,5 +89,47 @@ html, body{
     width: 100%
 
     text-align：center;
+    @at-root {
+        .controller-unit {
+            display: inline-block;
+            margin: 0 5px;
+            width: 30px;
+            height: 30px;
+
+            text-align: center;
+            vertical-align: middle;
+
+            cursor: pointer;
+            background-color: #aaa;
+            border-radius: 50%;
+
+            transform: scale(.5);
+            transition: transform .6s ease-in-out, background-color .3s;
+
+            &.is-center {
+                background-color: #888;
+
+                transform: scale(1);
+
+                &::after {
+                    color: #fff;
+                    font-family: "icons-turn-arrow";
+                    font-size: 80%;
+                    line-height: 30px;
+
+                    content: "\e600";
+
+                    -webkit-font-smoothing: antialiased;
+                    -moz-osx-font-smoothing: grayscale;
+                }
+
+                &.is-inverse {
+                    background-color: #555;
+
+                    transform: rotateY(180deg);
+                }
+            }
+        }
+    }
 }
 /* controller -- start */
