@@ -5,6 +5,4 @@ this is a react project for learn reacleaar
 ## second
   npm start or npm run serve:dist
 ### ps
-if you want see this demo page,please click here . <a href src="https://jiangsssw.github.io/react-study/>https://jiangsssw.github.io/react-study/
-</a>
-"
+if you want see this demo page,please click here https://jiangsssw.github.io/react-study/
